@@ -370,7 +370,7 @@
                      {% endif %}
 
                      {% if item.isField('users_id_tech') %}
-                        {{ fields.dropdownField(
+                        {#{{ fields.dropdownField(
                            'User',
                            'users_id_tech',
                            item.fields['users_id_tech'],
@@ -379,7 +379,7 @@
                               'entity': item.fields['entities_id'],
                               'right': 'own_ticket',
                            })
-                        ) }}
+                        ) }}#}
                      {% endif %}
 
                      {% if item.isField('manufacturers_id') %}
@@ -393,7 +393,7 @@
                      {% endif %}
 
                      {% if item.isField('groups_id_tech') %}
-                        {{ fields.dropdownField(
+                        {#{{ fields.dropdownField(
                            'Group',
                            'groups_id_tech',
                            item.fields['groups_id_tech'],
@@ -402,7 +402,7 @@
                               'entity': item.fields['entities_id'],
                               'condition': {'is_assign': 1},
                            })
-                        ) }}
+                        ) }}#}
                      {% endif %}
 
                      {% set model_itemtype = item.getModelClass() %}
@@ -419,12 +419,12 @@
 
                      {% if item_type != 'SoftwareLicense' and item.isField('contact_num') %}
                         {# TODO Drop unused 'contact_num' field in Software License schema? #}
-                        {{ fields.textField(
+                        {# {{ fields.textField(
                            'contact_num',
                            item.fields['contact_num'],
                            __('Alternate username number'),
                            field_options
-                        ) }}
+                        ) }} #}
                      {% endif %}
 
                      {% if item.isField('serial') %}
@@ -438,12 +438,12 @@
 
                      {% if item_type != 'SoftwareLicense' and item.isField('contact') %}
                         {# TODO Drop unused 'contact' field in Software License schema? #}
-                        {{ fields.textField(
+                        {# {{ fields.textField(
                            'contact',
                            item.fields['contact'],
                            __('Alternate username'),
                            field_options
-                        ) }}
+                        ) }} #}
                      {% endif %}
 
                      {% if item.isField('otherserial') %}
@@ -505,11 +505,11 @@
                               'width': '100%',
                            }]) %}
                         {% endset %}
-                        {{ fields.htmlField(
+                        {#{{ fields.htmlField(
                            'is_global',
                            dd_globalswitch,
                            __('Management type'),
-                        ) }}
+                        ) }}#}
                      {% endif %}
 
                      {% if item.isField('size') %}
@@ -548,12 +548,12 @@
                      {% endif %}
 
                      {% if item.isField('uuid') %}
-                        {{ fields.textField(
+                        {#{{ fields.textField(
                            'uuid',
                            item.fields['uuid'],
                            __('UUID'),
                            field_options
-                        ) }}
+                        ) }}#}
                      {% endif %}
 
                      {% if item.isField('version') %}
@@ -612,12 +612,12 @@
                      {% endif %}
 
                      {% if item.isField('brand') %}
-                        {{ fields.textField(
+                        {#{{ fields.textField(
                            'brand',
                            item.fields['brand'],
                            __('Brand'),
                            field_options
-                        ) }}
+                        ) }}#}
                      {% endif %}
 
                      {% if item.isField('begin_date') %}
@@ -630,13 +630,13 @@
                      {% endif %}
 
                      {% if item.isField('autoupdatesystems_id') %}
-                        {{ fields.dropdownField(
+                        {#{{ fields.dropdownField(
                            'AutoUpdateSystem',
                            'autoupdatesystems_id',
                            item.fields['autoupdatesystems_id'],
                            'AutoUpdateSystem'|itemtype_name,
                            field_options
-                        ) }}
+                        ) }}#}
                      {% endif %}
 
                      {% if item.isField('pictures') %}
